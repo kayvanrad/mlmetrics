@@ -6,7 +6,9 @@ def cummulative_gains(y_true, y_scores, df=None, ascending = False,
                       show_plot = True, ax = None):
     '''
     Plot cummulative gains charts and calculate the area under the curve.
-    Parameters:
+
+    Parameters
+    ----------
     y_true: numpy array or string
         Numpy array containing true labels or, if data given in a dataframe,
         a string containing the column name of the true labels.
@@ -25,7 +27,9 @@ def cummulative_gains(y_true, y_scores, df=None, ascending = False,
     ax: matplotlib.axes.Axes object
         Axes to plot the the cummulative gains charts on. If None, new plot will
         be created.
-    Returns:
+
+    Returns
+    -------
     auc: double or dictionary
         Area under cummulative gains chart(s). If multiple score columns
         present, a dictionary of score column names will be returned containing
