@@ -12,14 +12,14 @@ def cum_gains(y_true: np.array, y_score: np.array,
         True binary labels
     y_score: array_like
         Target scores
-    ascending: bool
+    ascending: bool, default = False
         Sort scores ascending
 
     Returns
     -------
     frac_samples: array
         Increasing fraction of samples
-    response_rage: array
+    response_rate: array
         Increasing response rate
     auc: float
         area under curve
