@@ -1,2 +1,2 @@
-# ptod
-Python Toolbox for Outlier Detection
+# mlmetrics
+Some useful machine learning metrics
