@@ -21,8 +21,11 @@ def cum_gains(y_true: np.array, y_score: np.array,
         Increasing fraction of samples
     response_rate: array
         Increasing response rate
+    scores : array
+        Sorted scores
     auc: float
         area under curve
+
     '''
     # check length of input arrays
     if len(y_true) != len(y_score):
@@ -43,4 +46,7 @@ def cum_gains(y_true: np.array, y_score: np.array,
     frac_samples = np.arange(len(y_score)) / len(y_score)
     auc = np.trapz(response_rate, frac_samples)
 
-    return (frac_samples, response_rate, auc)
+    if not ascending:
+        y_score = -y_score    
+
+    return (frac_samples, response_rate, y_score, auc)
